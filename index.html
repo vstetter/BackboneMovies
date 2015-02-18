@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Backbone Movie Database</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Monoton|Oswald:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css">
   <script type="text/template" id="movieTmpl">
 
-    <img src='<%= image %>'/>
+    <img src='<%= image %>'>
     <h2><%= title %></h2>
     <p><%= releaseDate %></p>
     <p><%= synopsis %></p>
     <button class = 'deleteMovie'>Delete Movie</button>
     <button class = 'editMovie'>Edit Movie</button>
-    <hr>
 
   </script>
 </head>
@@ -22,7 +22,7 @@
   </header>
 
   <section>
-    <h2>This is where the movies go</h2> <button class="showCreate">Add Movie</button>
+    <h2 id="subHeadline">Veronika's Movie Database  <button class="showCreate">Add Movie</button></h2>
     <form action="" id="createMovie">
       <p><input type="text" name="newImage" placeholder="Movie Poster URL"></p>
       <p><input type="text" name="newTitle" placeholder="Movie Title"></p>

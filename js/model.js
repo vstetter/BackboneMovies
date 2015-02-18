@@ -3,8 +3,7 @@ var MovieModel = Backbone.Model.extend({
   idAttribute: "_id",
   defaults: function () {
     return {
-      movieImage: 'http://ia.media-imdb.com/images/M/MV5BMTgxNzY3MzUxOV5BMl5BanBnXkFtZTcwMDA0NjMyNA@@._V1_SX214_AL_.jpg'
-
+      image: './images/FargoPoster.jpg'
     };
 
   },

@@ -7,7 +7,8 @@ var MovieView = Backbone.View.extend ({
     //console.log(this.el);
   },
   events: {
-    "click .deleteMovie": "removeMovie"
+    "click .deleteMovie": "removeMovie",
+    "click .editMovie": "editMovie"
   },
 
   render: function () {
@@ -52,10 +53,10 @@ var AppView = Backbone.View.extend({
     newModelMovie.save();
     console.log(this.collection.length);
     this.collection.add(newModelMovie);
-    // this.$el.find('article').remove();
+    this.$el.find('article').remove();
     console.log(this.collection.length);
     this.addAllMovies();
-    this.$el.find(#createMovie).find('input, textarea').val('');
+    this.$el.find('#createMovie').find('input, textarea').val('');
     this.showCreate();
   },
 

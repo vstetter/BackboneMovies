@@ -38,17 +38,14 @@ form {
     margin-bottom: 5px;
     font-size: 1em; }
 
-input {
-  font-size: 0.5em;
-  border: 1px solid #bdbdbd;
-  border-radius: 5%;
-  padding: 5px; }
-
 .showCreate, .deleteMovie, .editMovie {
-  font-size: 0.5em;
+  font-size: 0.75em;
   padding: 5px;
   background-color: white;
   border-radius: 5%; }
+  .showCreate :hover, .deleteMovie :hover, .editMovie :hover {
+    background-color: black;
+    color: white; }
 
 .show {
   display: block; }
