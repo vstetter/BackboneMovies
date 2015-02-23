@@ -8,7 +8,31 @@ var MovieView = Backbone.View.extend ({
   },
   events: {
     "click .deleteMovie": "removeMovie",
-    "click .editMovie": "editMovie"
+    "click .editMovie": "showEdit",
+    "click .updateMovieInfo": "editMovie"
+  },
+
+  showEdit: function () {
+    this.$el.find('.editform').addClass('show');
+    console.log(this.model.toJSON());
+  },
+
+  editMovie: function (event) {
+    console.log('submit edit');
+    event.preventDefault();
+    this.model.set({
+      image: this.$el.find('input[class="editImage"]').val(), //or this.$(rest the same)?
+      title: this.$el.find('input[class="editTitle"]').val(),
+      releaseDate: this.$el.find('input[class="editReleaseDate"]').val(),
+      synopsis: this.$el.find('input[class="editSynopsis"]').val()
+    });
+    console.log(this.model.toJSON());
+    this.model.save();
+    this.$el.find('.editform').removeClass('show');
+    this.render();
+    
+
+
   },
 
   render: function () {
@@ -23,6 +47,8 @@ var MovieView = Backbone.View.extend ({
     this.$el.remove();
     this.model.destroy();
   }
+
+
 
 });
 
@@ -53,9 +79,9 @@ var AppView = Backbone.View.extend({
     newModelMovie.save();
     console.log(this.collection.length);
     this.collection.add(newModelMovie);
-    this.$el.find('article').remove();
+    // this.$el.find('article').remove();
     console.log(this.collection.length);
-    this.addAllMovies();
+    this.addOneMovie(newModelMovie);
     this.$el.find('#createMovie').find('input, textarea').val('');
     this.showCreate();
   },

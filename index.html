@@ -7,12 +7,19 @@
   <link rel="stylesheet" href="styles.css">
   <script type="text/template" id="movieTmpl">
 
-    <img src='<%= image %>'>
+    <img src=<%= image %>>
     <h2><%= title %></h2>
     <p><%= releaseDate %></p>
     <p><%= synopsis %></p>
     <button class = 'deleteMovie'>Delete Movie</button>
     <button class = 'editMovie'>Edit Movie</button>
+    <div class='editform'>
+      <p><input class='editImage' type='text' value='<%= image %>'></p>
+      <p><input class='editTitle' type='text' value='<%= title %>'></p>
+      <p><input class='editReleaseDate' type='text' value='<%= releaseDate %>'></p>
+      <p><input class='editSynopsis' type='text' value='<%= synopsis %>'></p>
+      <button class='updateMovieInfo'>Update Movie Info</button>
+    </div>
 
   </script>
 </head>

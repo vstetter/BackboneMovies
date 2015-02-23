@@ -50,5 +50,8 @@ input {
   background-color: white;
   border-radius: 5%; }
 
+.editform {
+  display: none; }
+
 .show {
   display: block; }
