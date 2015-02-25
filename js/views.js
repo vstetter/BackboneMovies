@@ -30,8 +30,7 @@ var MovieView = Backbone.View.extend ({
     this.model.save();
     this.$el.find('.editform').removeClass('show');
     this.render();
-    
-
+  
 
   },
 

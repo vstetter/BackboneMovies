@@ -3,7 +3,7 @@ var MovieModel = Backbone.Model.extend({
   idAttribute: "_id",
   defaults: function () {
     return {
-      image: './images/FargoPoster.jpg'
+      image: '../images/FargoPoster.jpg'
     };
 
   },
